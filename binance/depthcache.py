@@ -223,6 +223,8 @@ class DepthCacheManager(object):
             if self._callback:
                 self._callback(None)
 
+            return
+
         if self._last_update_id is None:
             # Initial depth snapshot fetch not yet performed, buffer messages
             self._depth_message_buffer.append(msg)
